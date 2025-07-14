@@ -32,6 +32,10 @@ Clone the repo and install the dependencies:
 git clone https://github.com/<your-org-or-username>/biapas.git
 cd biapas
 pip install -r requirements.txt
+
+# Conda installation
+conda env create -f environment.yml
+conda activate biapas
 ```
 
 ## 🔧 Usage
@@ -40,25 +44,24 @@ python3 biapas_pipeline.py -i proteins.fasta -o output_dir
 ```
 
 Optional arguments:
--r, --rna – RNA sequences in FASTA format
--c, --config – Configuration file (.json)
--t, --threads – Number of threads (default: 1)
--v, --visualize – Generate plots and figures
--p, --protein_id – Analyze only a specific protein
---version – Show version
+- -r, --rna – RNA sequences in FASTA format
+- -c, --config – Configuration file (.json)
+- -t, --threads – Number of threads (default: 1)
+- -v, --visualize – Generate plots and figures
+- -p, --protein_id – Analyze only a specific protein
+- --version – Show version
 
 ## 📁 Output
-
-enhanced_biocondensat_summary.csv – Summary table of features
-enhanced_biocondensat_analysis.json – Full analysis per protein
-enhanced_analysis_report.txt – Condensate and aggregation type stats
-visualizations/ – (if --visualize) Visual plots per protein and summary plots
+- enhanced_biocondensat_summary.csv – Summary table of features
+- enhanced_biocondensat_analysis.json – Full analysis per protein
+- enhanced_analysis_report.txt – Condensate and aggregation type stats
+- visualizations/ – (if --visualize) Visual plots per protein and summary plots
 
 ## 🧪 Validation Goals
 
-Improved recall for Q/N-rich and disordered amyloids
-Enhanced specificity for prion domains
-Balanced detection for RNA-binding, aggregation, and condensate-forming regions
+- Improved recall for Q/N-rich and disordered amyloids
+- Enhanced specificity for prion domains
+- Balanced detection for RNA-binding, aggregation, and condensate-forming regions
 
 Validation command
 ```python
