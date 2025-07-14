@@ -8,7 +8,7 @@ echo ""
 # Check if input file exists
 if [ ! -f "example_proteins.fasta" ]; then
     echo "Error: example_proteins.fasta not found!"
-    echo "Please run this script from the examples/ directory"
+    echo "Please run this script from the test/ directory"
     exit 1
 fi
 
